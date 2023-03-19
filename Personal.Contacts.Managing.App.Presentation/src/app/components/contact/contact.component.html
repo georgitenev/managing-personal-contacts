@@ -55,7 +55,8 @@
             formControlName="dateOfBirth"
             [(ngModel)]="contact.dateOfBirth"
             [readonlyInput]="true"
-          ></p-calendar>
+          >
+          </p-calendar>
         </div>
 
         <div class="d-flex flex-row justify-content-end">
@@ -106,7 +107,11 @@
   [draggable]="false"
   [resizable]="false"
 >
-  <p class="m-0">Please check your input. Fields marked with * are required!</p>
+  <p class="m-0">
+    Please check your input. Fields marked with * are required!<br />Phone
+    number should be exact 10 characters length.<br />IBAN should be exact 22
+    characters length.
+  </p>
   <ng-template pTemplate="footer">
     <p-button
       icon="pi pi-check"
