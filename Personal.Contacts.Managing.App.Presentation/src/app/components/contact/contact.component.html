@@ -1,0 +1,53 @@
+<div class="themes-main flex mt-7 justify-content-center px-5 lg:px-8 main-container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="p-fluid p-grid p-formgrid">
+            <div class="col-md-6 col-sm-12 offset-md-3 mt-3">
+                          
+                <div class="p-field">
+                    <label>First name*</label>
+                    <input pInputText required formControlName="firstName" [(ngModel)]="contact.firstName"/>
+                </div>
+                <div class="p-field">
+                    <label>Surname*</label>
+                    <input pInputText required formControlName="surname" [(ngModel)]="contact.surname"/>
+                </div>
+                <div class="p-field">
+                    <label>Address*</label>
+                    <input pInputText required formControlName="address" [(ngModel)]="contact.address"/>
+                </div>
+                <div class="p-field">
+                    <label>Phone number*</label>
+                    <input pInputText required formControlName="phoneNumber" [(ngModel)]="contact.phoneNumber"/>
+                </div>
+                <div class="p-field">
+                    <label>IBAN*</label>
+                    <input pInputText required formControlName="iban" [(ngModel)]="contact.iban"/>
+                </div>
+                <div class="p-field">
+                    <label>Birth date*</label>
+                    <p-calendar formControlName="dateOfBirth" [(ngModel)]="contact.dateOfBirth" [readonlyInput]="true"></p-calendar>
+                </div>
+
+                <div class="d-flex flex-row justify-content-end">
+                    <button pButton pRipple type="button" label="Back" class="m-2"
+                        (click)="onBack()"></button>
+                    <button *ngIf="!contact.id" pButton pRipple type="submit" label="Create"
+                        class="m-2 p-button-success" icon="pi pi-check"></button>
+                    <button *ngIf="contact.id" pButton pRipple type="submit" label="Update"
+                        class="m-2 p-button-warning" icon="pi pi-user-edit"></button>
+                </div>
+                
+                <p-confirmDialog [baseZIndex]="10000" rejectButtonStyleClass="p-button-text">
+                </p-confirmDialog>
+            </div>
+        </div>
+    </form>
+</div>
+<p-toast></p-toast>
+<p-dialog header="Invalid form" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
+    <p class="m-0">Please check your input. Fields marked with * are required!</p>
+        <ng-template pTemplate="footer">
+            <p-button icon="pi pi-check" (click)="displayModal=false" label="Ok" class="p-button-text"></p-button>
+        </ng-template>
+</p-dialog>

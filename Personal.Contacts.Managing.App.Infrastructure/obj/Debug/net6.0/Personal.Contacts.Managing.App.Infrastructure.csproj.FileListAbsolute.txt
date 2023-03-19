@@ -1,0 +1,15 @@
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Infrastructure\bin\Debug\net6.0\Personal.Contacts.Managing.App.Infrastructure.deps.json
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Infrastructure\bin\Debug\net6.0\Personal.Contacts.Managing.App.Infrastructure.dll
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Infrastructure\bin\Debug\net6.0\Personal.Contacts.Managing.App.Infrastructure.pdb
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Infrastructure\bin\Debug\net6.0\Personal.Contacts.Managing.App.Domain.dll
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Infrastructure\bin\Debug\net6.0\Personal.Contacts.Managing.App.Domain.pdb
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Infrastructure\obj\Debug\net6.0\Personal.Contacts.Managing.App.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Infrastructure\obj\Debug\net6.0\Personal.Contacts.Managing.App.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Infrastructure\obj\Debug\net6.0\Personal.Contacts.Managing.App.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Infrastructure\obj\Debug\net6.0\Personal.Contacts.Managing.App.Infrastructure.AssemblyInfo.cs
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Infrastructure\obj\Debug\net6.0\Personal.Contacts.Managing.App.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Infrastructure\obj\Debug\net6.0\Personal.Contacts.Managing.App.Infrastructure.csproj.CopyComplete
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Infrastructure\obj\Debug\net6.0\Personal.Contacts.Managing.App.Infrastructure.dll
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Infrastructure\obj\Debug\net6.0\refint\Personal.Contacts.Managing.App.Infrastructure.dll
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Infrastructure\obj\Debug\net6.0\Personal.Contacts.Managing.App.Infrastructure.pdb
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Infrastructure\obj\Debug\net6.0\ref\Personal.Contacts.Managing.App.Infrastructure.dll

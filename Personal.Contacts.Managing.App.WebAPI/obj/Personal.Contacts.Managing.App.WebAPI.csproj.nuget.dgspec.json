@@ -1,0 +1,351 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.WebAPI\\Personal.Contacts.Managing.App.WebAPI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Application\\Personal.Contacts.Managing.App.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Application\\Personal.Contacts.Managing.App.Application.csproj",
+        "projectName": "Personal.Contacts.Managing.App.Application",
+        "projectPath": "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Application\\Personal.Contacts.Managing.App.Application.csproj",
+        "packagesPath": "C:\\Users\\georgi.tenev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\georgi.tenev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Domain\\Personal.Contacts.Managing.App.Domain.csproj": {
+                "projectPath": "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Domain\\Personal.Contacts.Managing.App.Domain.csproj"
+              },
+              "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Infrastructure\\Personal.Contacts.Managing.App.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Infrastructure\\Personal.Contacts.Managing.App.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.5.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Domain\\Personal.Contacts.Managing.App.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Domain\\Personal.Contacts.Managing.App.Domain.csproj",
+        "projectName": "Personal.Contacts.Managing.App.Domain",
+        "projectPath": "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Domain\\Personal.Contacts.Managing.App.Domain.csproj",
+        "packagesPath": "C:\\Users\\georgi.tenev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\georgi.tenev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Infrastructure\\Personal.Contacts.Managing.App.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Infrastructure\\Personal.Contacts.Managing.App.Infrastructure.csproj",
+        "projectName": "Personal.Contacts.Managing.App.Infrastructure",
+        "projectPath": "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Infrastructure\\Personal.Contacts.Managing.App.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\georgi.tenev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\georgi.tenev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Domain\\Personal.Contacts.Managing.App.Domain.csproj": {
+                "projectPath": "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Domain\\Personal.Contacts.Managing.App.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.WebAPI\\Personal.Contacts.Managing.App.WebAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.WebAPI\\Personal.Contacts.Managing.App.WebAPI.csproj",
+        "projectName": "Personal.Contacts.Managing.App.WebAPI",
+        "projectPath": "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.WebAPI\\Personal.Contacts.Managing.App.WebAPI.csproj",
+        "packagesPath": "C:\\Users\\georgi.tenev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.WebAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\georgi.tenev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Application\\Personal.Contacts.Managing.App.Application.csproj": {
+                "projectPath": "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Application\\Personal.Contacts.Managing.App.Application.csproj"
+              },
+              "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Infrastructure\\Personal.Contacts.Managing.App.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\georgi.tenev\\source\\repos\\Personal.Contacts.Managing.App\\Personal.Contacts.Managing.App.Infrastructure\\Personal.Contacts.Managing.App.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.5.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

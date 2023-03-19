@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Personal.Contacts.Managing.App.WebAPI.props" />
+</Project>

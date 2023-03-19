@@ -1,0 +1,49 @@
+<p-toast></p-toast>
+<div class="themes-main flex mt-7 justify-content-center px-5 lg:px-8 main-container">
+    <div class="box overflow-hidden z-1 p-5 table-container">
+        <div>
+            <button pButton class="create-new-contact" icon="pi pi-check" (click)="createContact()" label="Create new"></button>
+        </div>
+        <p-table [value]="contacts" [tableStyle]="{'min-width': '50rem'}" [rowHover]="true" [rows]="10"
+            [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" [paginator]="true"
+            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [filterDelay]="0"
+            [globalFilterFields]="['name','country.name','representative.name','status']">
+
+            <ng-template pTemplate="caption">
+                <div class="table-header">
+                    Contacts list
+                </div>
+            </ng-template>
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>First name</th>
+                    <th>Surname</th>
+                    <th>Address</th>
+                    <th>Phone number</th>
+                    <th>Iban</th>
+                    <th>Date of birth</th>
+                    <th></th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-contact>
+                <tr>
+                    <td>{{contact.firstName}}</td>
+                    <td>{{contact.surname}}</td>
+                    <td>{{contact.address}}</td>
+                    <td>{{contact.phoneNumber}}</td>
+                    <td>{{contact.iban}}</td>
+                    <td>{{contact.dateOfBirth}}</td>
+                    <td>
+                        <button pButton pRipple title="Edit contact" type="button" icon="pi pi-user-edit"
+                            class="p-button-rounded p-button-info p-button-text"
+                            (click)="editContact(contact.id)"></button>
+                        <button pButton pRipple title="Delete contact" type="button" icon="pi pi-times"
+                            class="p-button-rounded p-button-danger p-button-text"
+                            (click)="deleteContact(contact.id)"></button>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>
+<p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000"></p-confirmDialog>

@@ -1,0 +1,12 @@
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Domain\bin\Debug\net6.0\Personal.Contacts.Managing.App.Domain.deps.json
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Domain\bin\Debug\net6.0\Personal.Contacts.Managing.App.Domain.dll
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Domain\bin\Debug\net6.0\Personal.Contacts.Managing.App.Domain.pdb
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Domain\obj\Debug\net6.0\Personal.Contacts.Managing.App.Domain.csproj.AssemblyReference.cache
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Domain\obj\Debug\net6.0\Personal.Contacts.Managing.App.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Domain\obj\Debug\net6.0\Personal.Contacts.Managing.App.Domain.AssemblyInfoInputs.cache
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Domain\obj\Debug\net6.0\Personal.Contacts.Managing.App.Domain.AssemblyInfo.cs
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Domain\obj\Debug\net6.0\Personal.Contacts.Managing.App.Domain.csproj.CoreCompileInputs.cache
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Domain\obj\Debug\net6.0\Personal.Contacts.Managing.App.Domain.dll
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Domain\obj\Debug\net6.0\refint\Personal.Contacts.Managing.App.Domain.dll
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Domain\obj\Debug\net6.0\Personal.Contacts.Managing.App.Domain.pdb
+C:\Users\georgi.tenev\source\repos\Personal.Contacts.Managing.App\Personal.Contacts.Managing.App.Domain\obj\Debug\net6.0\ref\Personal.Contacts.Managing.App.Domain.dll
