@@ -13,10 +13,9 @@ import { selectContactsState } from '../../app-state/selectors/contacts.selector
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
-  providers: [ConfirmationService, MessageService]
+  providers: [ConfirmationService, MessageService],
 })
 export class ContactComponent {
-
   public displayModal: boolean = false;
 
   public contact: Contact = {
@@ -26,7 +25,7 @@ export class ContactComponent {
     dateOfBirth: new Date(),
     address: '',
     phoneNumber: '',
-    iban: ''
+    iban: '',
   };
 
   public form = new FormGroup({
@@ -34,8 +33,16 @@ export class ContactComponent {
     surname: new FormControl(this.contact.surname, Validators.required),
     dateOfBirth: new FormControl(this.contact.dateOfBirth, Validators.required),
     address: new FormControl(this.contact.address, Validators.required),
-    phoneNumber: new FormControl(this.contact.phoneNumber, [Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
-    iban: new FormControl(this.contact.iban, [Validators.required, Validators.minLength(22), Validators.maxLength(22)])
+    phoneNumber: new FormControl(this.contact.phoneNumber, [
+      Validators.required,
+      Validators.minLength(10),
+      Validators.maxLength(10),
+    ]),
+    iban: new FormControl(this.contact.iban, [
+      Validators.required,
+      Validators.minLength(22),
+      Validators.maxLength(22),
+    ]),
   });
 
   constructor(
@@ -43,9 +50,9 @@ export class ContactComponent {
     private router: Router,
     private route: ActivatedRoute,
     private contactService: ContactService,
-    private messageService: MessageService,
+    private messageService: MessageService
   ) {
-    this.route.params.subscribe(params => {
+    this.route.params.subscribe((params) => {
       if (params['id']) {
         this.loadContact(params['id']);
         // this.contactService.getContact(params['id']).subscribe(data => {
@@ -60,9 +67,9 @@ export class ContactComponent {
   private loadContact(contactId: string): void {
     this.store.dispatch(contactsActions.getContact({ contactId }));
   }
-  
+
   private subscribeForCurrentState(): void {
-    this.store.select(selectContactsState).subscribe(state => {
+    this.store.select(selectContactsState).subscribe((state) => {
       if (state.contact) {
         this.contact = {
           id: state.contact.id,
@@ -76,29 +83,55 @@ export class ContactComponent {
       }
 
       if (state.errorMessage) {
-        this.messageService.add({ severity: 'error', summary: 'Error', detail: state.errorMessage });
-        this.store.dispatch(contactsActions.setErrorMessage({ errorMessage: null }));
+        this.messageService.add({
+          severity: 'error',
+          summary: 'Error',
+          detail: state.errorMessage,
+        });
+        this.store.dispatch(
+          contactsActions.setErrorMessage({ errorMessage: null })
+        );
       }
 
       if (state.contactId && state.isCreateSuccessful) {
-        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Contact created sucessfully!' });
-        this.store.dispatch(contactsActions.createContactSuccess({ contact: null, result: false }));
-        this.store.dispatch(contactsActions.setErrorMessage({ errorMessage: null }));
+        this.messageService.add({
+          severity: 'success',
+          summary: 'Success',
+          detail: 'Contact created sucessfully!',
+        });
+        this.store.dispatch(
+          contactsActions.createContactSuccess({ contact: null, result: false })
+        );
+        this.store.dispatch(
+          contactsActions.setErrorMessage({ errorMessage: null })
+        );
         this.router.navigate(['contacts-view']);
       }
 
       if (state.contactId && state.contact && state.isUpdateSuccessful) {
-        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Contact updated sucessfully!' });
-        this.store.dispatch(contactsActions.updateContactSuccess({ contact: null, result: false }));
-        this.store.dispatch(contactsActions.setErrorMessage({ errorMessage: null }));
+        this.messageService.add({
+          severity: 'success',
+          summary: 'Success',
+          detail: 'Contact updated sucessfully!',
+        });
+        this.store.dispatch(
+          contactsActions.updateContactSuccess({ contact: null, result: false })
+        );
+        this.store.dispatch(
+          contactsActions.setErrorMessage({ errorMessage: null })
+        );
         this.router.navigate(['contacts-view']);
       }
     });
   }
 
   onBack() {
-    this.store.dispatch(contactsActions.createContactSuccess({ contact: null, result: false }));
-    this.store.dispatch(contactsActions.updateContactSuccess({ contact: null, result: false }));
+    this.store.dispatch(
+      contactsActions.createContactSuccess({ contact: null, result: false })
+    );
+    this.store.dispatch(
+      contactsActions.updateContactSuccess({ contact: null, result: false })
+    );
     this.router.navigateByUrl('contacts-view');
   }
 
@@ -107,14 +140,16 @@ export class ContactComponent {
     if (this.form.valid) {
       if (this.contact.id) {
         // this.updateContact();
-        this.store.dispatch(contactsActions.updateContact({ contact: this.contact }));
-      }
-      else {
+        this.store.dispatch(
+          contactsActions.updateContact({ contact: this.contact })
+        );
+      } else {
         // this.createContact();
-        this.store.dispatch(contactsActions.createContact({ contact: this.contact }));
+        this.store.dispatch(
+          contactsActions.createContact({ contact: this.contact })
+        );
       }
-    }
-    else {
+    } else {
       this.displayModal = true;
     }
   }

@@ -53,10 +53,10 @@ import { ContactsEffects } from './app-state/effects/contacts.effects';
     PanelModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule ,
+    ReactiveFormsModule,
 
     // ngrx related imports
-    StoreModule.forRoot({contactsState: contactsReducer}),
+    StoreModule.forRoot({ contactsState: contactsReducer }),
     EffectsModule.forRoot([ContactsEffects]),
 
     RouterModule.forRoot([
@@ -68,7 +68,6 @@ import { ContactsEffects } from './app-state/effects/contacts.effects';
   ],
   declarations: [AppComponent, ContactsViewComponent, ContactComponent],
   bootstrap: [AppComponent],
-  providers: [ContactService]
+  providers: [ContactService],
 })
-
-export class AppModule { }
+export class AppModule {}
