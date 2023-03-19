@@ -1,6 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
 import { Contact } from "../../shared/models/contact";
-import * as contactsActions from "../actions/contacts.actions";
+import * as contactsActions from '../actions/contacts.actions';
 
 
 export interface ContactsState {
@@ -14,7 +14,7 @@ export interface ContactsState {
 }
 
 export const initialState: ContactsState = {
-    contacts: null,
+    contacts: [],
     contact: null,
     contactId: null,
     isCreateSuccessful: false,
@@ -30,10 +30,10 @@ export const contactsReducer = createReducer(
     on(contactsActions.getContact, (state, { contactId }) => ({ ...state, contactId })),
     on(contactsActions.getContactSuccess, (state, { contact }) => ({ ...state, contact })),
     on(contactsActions.createContact, (state, { contact }) => ({ ...state, contact })),
-    on(contactsActions.createContactSuccess, (state, { contact, isSuccess }) => ({ ...state, contact, isCreateSuccessful: isSuccess })),
-    on(contactsActions.setErrorMessage, (state, { errorMessage }) => ({ ...state, errorMessage })),
+    on(contactsActions.createContactSuccess, (state, { contact, result }) => ({ ...state, contact, isCreateSuccessful: result })),
     on(contactsActions.updateContact, (state, { contact }) => ({ ...state, contact })),
-    on(contactsActions.updateContactSuccess, (state, { contact, isSuccess }) => ({ ...state, contact, isUpdateSuccessful: isSuccess })),
+    on(contactsActions.updateContactSuccess, (state, { contact, result }) => ({ ...state, contact, isUpdateSuccessful: result })),
     on(contactsActions.deleteContact, (state, { contactId }) => ({ ...state, contactId })),
     on(contactsActions.deleteContactSuccess, (state, { result }) => ({ ...state, isDeleteSuccessful: result })),
+    on(contactsActions.setErrorMessage, (state, { errorMessage }) => ({ ...state, errorMessage })),
 );

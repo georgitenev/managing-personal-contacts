@@ -27,11 +27,11 @@ export class ContactsViewComponent {
 
   ngOnInit() {
     // this.contactService.getAllContacts().subscribe(data => this.contacts = data);
-    this.loadContacts(null);
+    this.loadContacts();
     this.subscribeForCurrentState();
   }
 
-  public loadContacts(event: any): void {
+  public loadContacts(): void {
     this.store.dispatch(contactsActions.getAllContacts({}));
   }
 
@@ -44,14 +44,14 @@ export class ContactsViewComponent {
       this.contacts = state.contacts!;
 
       if (state.isDeleteSuccessful) {
-        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Contact deleted' });
+        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Contact was deleted sucessfully!' });
         this.store.dispatch(contactsActions.deleteContactSuccess({ result: false }));
-        this.loadContacts(null);
+        this.loadContacts();
       }
       if (!state.isDeleteSuccessful && state.errorMessage) {
-        this.messageService.add({ severity: 'error', summary: 'Contact could not be deleted', detail: state.errorMessage });
+        this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Something went wrong while trying to delete contact' });
         this.store.dispatch(contactsActions.deleteContactSuccess({ result: false }));
-        this.store.dispatch(contactsActions.setErrorMessage({ errorMessage: state.errorMessage }));
+        this.store.dispatch(contactsActions.setErrorMessage({ errorMessage: null }));
       }
     });
   }

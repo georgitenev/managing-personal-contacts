@@ -63,88 +63,42 @@ export class ContactComponent {
   
   private subscribeForCurrentState(): void {
     this.store.select(selectContactsState).subscribe(state => {
-      // Details contact
       if (state.contact) {
-        this.contact = { ...state.contact };
-        this.contact.dateOfBirth = new Date(state.contact.dateOfBirth);
+        this.contact = {
+          id: state.contact.id,
+          firstName: state.contact.firstName,
+          surname: state.contact.surname,
+          dateOfBirth: new Date(state.contact.dateOfBirth),
+          address: state.contact.address,
+          phoneNumber: state.contact.phoneNumber,
+          iban: state.contact.iban,
+        };
       }
 
-      // Create contact
+      if (state.errorMessage) {
+        this.messageService.add({ severity: 'error', summary: 'Error', detail: state.errorMessage });
+        this.store.dispatch(contactsActions.setErrorMessage({ errorMessage: null }));
+      }
+
       if (state.contactId && state.isCreateSuccessful) {
         this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Contact created sucessfully!' });
-        this.store.dispatch(contactsActions.createContactSuccess({ contact: null, isSuccess: false }));
-        this.router.navigate(['contacts/overview'], { queryParams: { isSuccess: 'true' } });
-
-      } else if(!state.isCreateSuccessful && state.errorMessage) {
-        this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Something went wrong while trying to create contact' });
+        this.store.dispatch(contactsActions.createContactSuccess({ contact: null, result: false }));
         this.store.dispatch(contactsActions.setErrorMessage({ errorMessage: null }));
+        this.router.navigate(['contacts-view']);
       }
 
-      // Update contact
-      if (state.contact && state.isUpdateSuccessful) {
+      if (state.contactId && state.contact && state.isUpdateSuccessful) {
         this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Contact updated sucessfully!' });
-        this.store.dispatch(contactsActions.updateContactSuccess({ contact: null, isSuccess: false }));
-
-      } else if (!state.isUpdateSuccessful && state.errorMessage) {
-        this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Something went wrong while trying to update contact' });
+        this.store.dispatch(contactsActions.updateContactSuccess({ contact: null, result: false }));
         this.store.dispatch(contactsActions.setErrorMessage({ errorMessage: null }));
+        this.router.navigate(['contacts-view']);
       }
     });
   }
 
-  // private subscribeForCurrentState(): void {
-  //   this.store.select(selectContactsState).subscribe(state => {
-  //     //Get
-  //     if (state.contact) {
-  //       this.contact = {
-  //         id: state.contact.id,
-  //         firstName: state.contact.firstName,
-  //         surname: state.contact.surname,
-  //         dateOfBirth: new Date(state.contact.dateOfBirth),
-  //         address: state.contact.address,
-  //         phoneNumber: state.contact.phoneNumber,
-  //         iban: state.contact.iban,
-  //       };
-  //     }
-  //     else {
-  //       this.contact = {
-  //         id: '',
-  //         firstName: '',
-  //         surname: '',
-  //         dateOfBirth: new Date(),
-  //         address: '',
-  //         phoneNumber: '',
-  //         iban: ''
-  //       };
-  //     }
-
-  //     //Create
-  //     if (state.contact && state.isCreateSuccessful) {
-  //       this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Contact created' });
-  //       this.store.dispatch(contactsActions.createContactSuccess({ contact: null, isSuccess: false }));
-  //       this.router.navigate(['']);
-
-  //     } else if (!state.isCreateSuccessful && state.errorMessage) {
-  //       this.messageService.add({ severity: 'error', summary: 'Contact could not be created', detail: state.errorMessage });
-  //       this.store.dispatch(contactsActions.setErrorMessage({ errorMessage: state.errorMessage }));
-  //     }
-
-  //     //Update
-  //     if (state.contact && state.isUpdateSuccessful) {
-  //       this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Contact updated' });
-  //       this.store.dispatch(contactsActions.updateContactSuccess({ contact: null, isSuccess: false }));
-  //       this.router.navigate(['']);
-
-  //     } else if (!state.isUpdateSuccessful && state.errorMessage) {
-  //       this.messageService.add({ severity: 'error', summary: 'Contact could not be updated', detail: state.errorMessage });
-  //       this.store.dispatch(contactsActions.setErrorMessage({ errorMessage: null }));
-  //     }
-  //   });
-  // }
-
   onBack() {
-    this.store.dispatch(contactsActions.createContactSuccess({ contact: null, isSuccess: false }));
-    this.store.dispatch(contactsActions.updateContactSuccess({ contact: null, isSuccess: false }));
+    this.store.dispatch(contactsActions.createContactSuccess({ contact: null, result: false }));
+    this.store.dispatch(contactsActions.updateContactSuccess({ contact: null, result: false }));
     this.router.navigateByUrl('contacts-view');
   }
 

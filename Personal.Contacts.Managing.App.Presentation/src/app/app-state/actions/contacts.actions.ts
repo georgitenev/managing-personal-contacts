@@ -18,13 +18,13 @@ export const createContact = createAction(CONTACTS_TYPES.CREATE_CONTACT,
     props<{ contact: Contact }>());
 
 export const createContactSuccess = createAction(CONTACTS_TYPES.CREATE_CONTACT_SUCCESS,
-    props<{ contact: Contact | null, isSuccess: boolean }>());
+    props<{ contact: Contact | null, result: boolean }>());
 
 export const updateContact = createAction(CONTACTS_TYPES.UPDATE_CONTACT,
     props<{ contact: Contact }>());
 
 export const updateContactSuccess = createAction(CONTACTS_TYPES.UPDATE_CONTACT_SUCCESS,
-    props<{ contact: Contact | null, isSuccess: boolean }>());
+    props<{ contact: Contact | null, result: boolean }>());
 
 export const deleteContact = createAction(CONTACTS_TYPES.DELETE_CONTACT,
     props<{ contactId: string }>());
